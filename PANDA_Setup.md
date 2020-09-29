@@ -1,3 +1,10 @@
+- [Creating a Ubuntu Desktop 20.04 Virtual Machine with PANDA](#creating-a-ubuntu-desktop-2004-virtual-machine-with-panda)
+  - [Install PANDA](#install-panda)
+  - [Working Directory and Downloading Ubuntu ISO](#working-directory-and-downloading-ubuntu-iso)
+  - [Launch VM and Install the Ubuntu OS](#launch-vm-and-install-the-ubuntu-os)
+  - [Reboot without Ubuntu ISO attached](#reboot-without-ubuntu-iso-attached)
+  - [Setting up an appropriate snapshot](#setting-up-an-appropriate-snapshot)
+
 # Creating a Ubuntu Desktop 20.04 Virtual Machine with PANDA
 **Goal:** My goal is to setup and PANDA into (relatively) clean install of Ubuntu 18.04.5 LTS (Bionic Beaver) on my Lenovo Thinkpad W530 (Intel Core i7, 16GB RAM) so that I can play around with its features and plugins.
 
@@ -47,7 +54,7 @@ Explanation
 
 Now, you have a folder containing the Ubuntu ISO and HDD in which Ubuntu will be installed on.
 
-Launch QEMU VM with Ubuntu ISO and HDD that we created in the previous step attached. It will install the OS to HDD.
+Launch QEMU VM with Ubuntu ISO and HDD that we created in the previous step attached. It will install the OS to HDD. **NOTE**: Make sure that the virtualization (VT-x/AMD-V)in your BIOS setting is enabled otherwise, the installation and booting processing will be super slow.
 
 ```Console
 sudo qemu-system-x86_64 \
